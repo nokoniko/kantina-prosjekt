@@ -7,16 +7,18 @@
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
     <body>
-        <div>
+        <div class="topbar">
             <header class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Akademiet logo"></header>
             <nav>
-                <a href="/">hejm</a>
-                <a href="/meny">Meny</a>
-                <a href="/kontakt">kontakt</a>
-                <a href="/varer">om</a>
+                <ul>
+                    <li><a href="/">hejm</a></li>
+                    <li><a href="/meny">Meny</a></li>
+                    <li><a href="/kontakt">kontakt</a></li>
+                    <li><a href="/varer">om</a></li>
+                </ul>
             </nav>
         </div>
         {% block content %}{% endblock %}
-        <footer class="footerting">copyright 2025</footer>
+        <footer class="footer">copyright 2025</footer>
     </body>
 </html>
