@@ -5,20 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     </head>
     <body>
         <div class="topbar">
             <header class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Akademiet logo"></header>
             <nav>
                 <ul>
-                    <li><a href="/">hejm</a></li>
+                    <li><a href="/">Hjem</a></li>
                     <li><a href="/meny">Meny</a></li>
                     <li><a href="/kontakt">kontakt</a></li>
-                    <li><a href="/varer">om</a></li>
+                    <li><a href="/varer">Om</a></li>
                 </ul>
             </nav>
         </div>
         {% block content %}{% endblock %}
-        <footer class="footer">copyright 2025</footer>
+        <footer class="footer">lagd av meg ass©</footer>
     </body>
 </html>
