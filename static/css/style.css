@@ -1,8 +1,20 @@
 body {
+    margin: 5;
+    padding: 5;
     font-family: Arial, sans-serif;
-    background: #f0f0f0;
-    text-align: center;
+
 }
-h1 {
-    color: #333;
+
+.logo img {
+    height: 80px;
+    width: auto;
+    display: block;
+}
+
+.footerting {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
 }
