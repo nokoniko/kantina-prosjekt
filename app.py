@@ -1,6 +1,9 @@
 from flask import Flask, render_template
+from utils.hjelp import Hjelp
 
 app = Flask(__name__)
+hjelp = Hjelp(__name__)
+
 
 @app.route('/')
 def index() -> str:
@@ -17,6 +20,10 @@ def kontakt() -> str:
 @app.route('/varer')
 def varer() -> str:
     return render_template('varer.html')
+
+@app.route('/dagmeny')
+def dagens() -> str:
+    return hjelp.dagmeny()
 
 
 if __name__ == "__main__":
