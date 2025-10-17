@@ -1,7 +1,19 @@
 {% extends "base.html" %}
+{% block title %}Dagens meny{% endblock %}
 
-{% block title  %}Varer{% endblock %}
+{% block content %}
+<h2 class="title-index">Kantinevarer</h2>
 
-{ % block content % }
-<p>test</p>
-{ % endblock % }
+<div class="meny-konteiner">
+    {% for vare in varere %}
+    <div class="rett-boks">
+        <strong>{{ vare.navn }}</strong>
+        <p>Kategori: {{ vare.kategori }}</p>
+        <p>Pris: {{ vare.pris }}</p>
+        {% if vare.allergener %}
+            <p><em>Allergener:</em> {{ vare.allergener | join(', ') }}</p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
