@@ -17,7 +17,7 @@ def meny() -> str:
 
 @app.route('/kontakt')
 def kontakt() -> str:
-    return render_template('kontakt.html')
+    return render_template('kontakt.html', kontakter=liste.kontanktpersoner)
 
 @app.route('/varer')
 def varer() -> str:
