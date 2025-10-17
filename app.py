@@ -4,6 +4,7 @@ from utils.liste import *
 
 app = Flask(__name__)
 hjelp = Hjelp(__name__)
+liste = Liste(__name__)
 
 
 @app.route('/')
@@ -12,7 +13,7 @@ def index() -> str:
 
 @app.route('/meny')
 def meny() -> str:
-    return render_template('meny.html', menyen=menyen)
+    return render_template('meny.html', menyen=liste.menyen)
 
 @app.route('/kontakt')
 def kontakt() -> str:
@@ -20,7 +21,7 @@ def kontakt() -> str:
 
 @app.route('/varer')
 def varer() -> str:
-    return render_template('varer.html')
+    return render_template('varer.html', varere=liste.varere)
 
 @app.route('/dagmeny')
 def dagens() -> str:
