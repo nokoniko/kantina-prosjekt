@@ -2,9 +2,9 @@
 {% block title %}Dagens meny{% endblock %}
 
 {% block content %}
-<h2 class="title-index">Kantine retter</h2>
+<h2 class="title-index">Kantineretter</h2>
 
-<div class="meny-container">
+<div class="meny-konteiner">
     {% for rett in menyen %}
     <div class="rett-boks">
         <img src="{{ url_for('static', filename='img/meny/' ~ rett.bilde) }}" alt="{{ rett.navn }}" class="rett-bilde">
