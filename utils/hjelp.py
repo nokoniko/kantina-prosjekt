@@ -5,9 +5,13 @@ class Hjelp:
     def __init__(self, name) -> None:
         self.name = name
 
+    # lager en variablen som hetter dag. den får hvulken dag det er med å bruke datetime.
     dag = datetime.datetime.now().strftime("%A")
 
     def dagmeny(self) -> str:
+        """
+        lager en funskjon som bruker den lokale variablen dag den matcher hvilken dag det er og retunerer den rikitge nettsiden får den dagen
+        """
         match self.dag:
             case "Monday":
                 return render_template('mandag.html')

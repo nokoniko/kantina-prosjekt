@@ -9,7 +9,7 @@
     </head>
     <body>
         <div class="topbar">
-            <header class="logo"><img src="{{ url_for('static', filename='img/logo.png') }}" alt="Akademiet logo"></header>
+            <header class="logo"><img src="{{ url_for('static', filename='img/logo/logo.png') }}" alt="Akademiet logo"></header>
             <nav>
                 <ul>
                     <li><a href="/">Hjem</a></li>
@@ -19,7 +19,9 @@
                 </ul>
             </nav>
         </div>
-        {% block content %}{% endblock %}
+        <main class="content-wrapper">
+            {% block content %}{% endblock %}
+        </main>
         <footer class="footer">lagd av meg ass©</footer>
     </body>
 </html>

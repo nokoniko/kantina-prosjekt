@@ -1,3 +1,20 @@
 {% extends "base.html" %}
+{% block title %}Dagens meny{% endblock %}
 
-{% block title  %}Meny{% endblock %}
+{% block content %}
+<h2 class="title-index">Kantine retter</h2>
+
+<div class="meny-container">
+    {% for rett in menyen %}
+    <div class="rett-boks">
+        <img src="{{ url_for('static', filename='img/meny/' ~ rett.bilde) }}" alt="{{ rett.navn }}" class="rett-bilde">
+        <strong>{{ rett.navn }}</strong>
+        <p>Dag: {{ rett.dag }}</p>
+        <p>Kategori: {{ rett.kategori }}</p>
+        {% if rett.allergener %}
+            <p><em>Allergener:</em> {{ rett.allergener | join(', ') }}</p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

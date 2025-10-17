@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %}Dagens rett{% endblock %}
+
+{% block content %}
+{% if rett %}
+<div class="rett-boks" style="margin: 0 auto; max-width: 300px;">
+    <img src="{{ url_for('static', filename='images/' ~ rett.bilde) }}" alt="{{ rett.navn }}" class="rett-bilde">
+    <strong>{{ rett.navn }}</strong>
+    <p>Dag: {{ rett.dag }}</p>
+    <p>Kategori: {{ rett.kategori }}</p>
+    {% if rett.allergener %}
+        <p><em>Allergener:</em> {{ rett.allergener | join(', ') }}</p>
+    {% endif %}
+</div>
+{% else %}
+<p>Ingen rett i dag 😅</p>
+{% endif %}
+{% endblock %}
