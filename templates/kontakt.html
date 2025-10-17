@@ -4,10 +4,10 @@
 {% block content %}
 <h2 class="title-index">Kontakt personer til kantinen</h2>
 
-<div class="meny-konteiner">
+<div class="kontakt-konteiner">
     {% for person in kontakter %}
-    <div class="rett-boks">
-        <img src="{{ url_for('static', filename='img/personer/' ~ person.bilde) }}" alt="{{ person.navn }}" class="rett-bilde">
+    <div class="kontakt-boks">
+        <img src="{{ url_for('static', filename='img/personer/' ~ person.bilde) }}" alt="{{ person.navn }}" class="kontakt-bilde">
         <strong>{{ person.navn }}</strong>
         <p>stilling: {{ person.stilling }}</p>
         <p>telefon: {{person.tlf}}</p>

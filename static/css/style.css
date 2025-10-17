@@ -84,7 +84,7 @@ nav a:hover {
     flex-grow: 1; /* Forteller innholdet at det skal vokse og ta all ledig plass, og dermed dytte footeren ned */
 }
 
-.meny-container {
+.meny-konteiner {
     display: flex;
     flex-wrap: wrap; /* Sørger for at elementene "knekker" til neste linje hvis det ikke er plass. */
     gap: 25px;
@@ -119,6 +119,51 @@ nav a:hover {
     margin: 5px 0;
     font-size: 14px;
     padding-left: 0; /* Nullstiller padding for <p>-elementer inne i .rett-boks for å sikre sentrering. */
+}
+
+.rett-boks:hover {
+    transform: scale(1.05);
+}
+
+.kontakt-konteiner {
+    display: flex;
+    flex-wrap: wrap; /* Sørger for at elementene "knekker" til neste linje hvis det ikke er plass. */
+    gap: 25px;
+    justify-content: flex-start; /* Starter elementene fra venstre. */
+    padding-bottom: 60px; /* for luft mot footer */
+}
+
+.kontakt-boks {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 350px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.kontakt-bilde {
+    width: 100%;
+    height: 500px;
+    object-fit: cover; /* Sørger for at bildet dekker hele rammen uten å strekkes. Det kan bli beskåret. */
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.kontakt-boks strong {
+    font-size: 18px;
+    color: #000;
+}
+
+.kontakt-boks p {
+    margin: 5px 0;
+    font-size: 14px;
+    padding-left: 0; /* Nullstiller padding for <p>-elementer inne i .rett-boks for å sikre sentrering. */
+}
+
+.kontakt-boks:hover {
+    transform: scale(1.05);
 }
 
 /* Legg til padding for hovedinnholdet og bunnteksten for å matche tidligere innrykk */
