@@ -14,13 +14,16 @@ body {
     min-height: 100vh; /* Sørger for at body er minst like høy som skjermen */
 }
 
-p {
-    padding-left: 60px;
+/* Vi lager en egen klasse for brødtekst for å unngå at alle <p>-elementer får unødvendig padding. */
+/* Dette er mer spesifikt og forutsigbart enn å style alle <p> globalt. */
+.brodtekst {
+    padding-left: 60px; /* Gir ekstra innrykk til lengre tekstblokker. */
 }
 
 .title-index {
     font-size: 48px;
     color: #000;
+    padding-left: 60px;
 }
 
 .topbar {
@@ -96,6 +99,7 @@ nav a:hover {
     width: 350px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     font-family: 'Inter', sans-serif;
+    text-align: center;
 }
 
 .rett-bilde {
@@ -114,6 +118,7 @@ nav a:hover {
 .rett-boks p {
     margin: 5px 0;
     font-size: 14px;
+    padding-left: 0; /* Nullstiller padding for <p>-elementer inne i .rett-boks for å sikre sentrering. */
 }
 
 /* Legg til padding for hovedinnholdet og bunnteksten for å matche tidligere innrykk */
