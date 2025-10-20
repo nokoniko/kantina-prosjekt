@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="banner" style="background-image: url({{ url_for('static', filename='img/bakgrund/bilde.jpg') }});">
-    <h1 class="banner-tittel">Velkommen til Akademiets Kantine</h1>
+    <h1 class="banner-tittel">Vil du spisse hos oss?</h1>
 </div>
 
 <h2 class="title-index">Et bærekraftig valg</h2>
@@ -17,31 +17,29 @@
 </p>
 
 <h2 class="title-index">Et glimt av menyen</h2>
-<div class="meny-konteiner">
-    <div class="rett-boks">
-        <img src="{{ url_for('static', filename='img/meny/andeconfit.jpeg') }}" alt="Andeconfit" class="rett-bilde">
+<div class="boks-konteiner">
+    <div class="boks">
+        <img src="{{ url_for('static', filename='img/meny/andeconfit.jpeg') }}" alt="Andeconfit" class="boks-bilde">
         <strong>Andeconfit</strong>
         <p>Sprøstekt andelår med kremet potetpuré</p>
     </div>
-    <div class="rett-boks">
-        <img src="{{ url_for('static', filename='img/meny/coq_au_vin.jpg') }}" alt="Coq au vin" class="rett-bilde">
-        <strong>Coq au Vin</strong>
-        <p>Kyllinggryte i rødvin med grønnsaker</p>
+    <div class="boks">
+        <img src="{{ url_for('static', filename='img/varer/epplejuice.jpg') }}" alt="Coq au vin" class="boks-bilde">
+        <strong>Epplejuice</strong>
+        <p>Epplejuice til maten for smakfull </p>
     </div>
-    <div class="rett-boks">
-        <img src="{{ url_for('static', filename='img/varer/brownie.webp') }}" alt="brownie" class="rett-bilde">
+    <div class="boks">
+        <img src="{{ url_for('static', filename='img/varer/brownie.webp') }}" alt="brownie" class="boks-bilde">
         <strong>Brownie</strong>
         <p>En delig liten diser for etter maten</p>
     </div>
-    <p>Er du mer intrisert om hva vi har? <a href="{{ url_for('meny') }}">Se hele menyen her →</a></p>
+    <p style="padding-left: 60px;">Er du mer intrisert om hva vi har? <a href="{{ url_for('meny') }}">Se hele menyen her →</a></p>
 </div>
-
 
 <h2 class="title-index">Pris</h2>
 <p class="brodtekst">
-    Nyt fersk kantinemat hver dag for kun <strong>xxx kr per måned</strong>.<br>
-    Ønsker du heller å spise av og til? Enkeltretter koster <strong>xxx kr</strong>.<br><br>
-    <a href="{{ url_for('meny') }}">Se hele menyen her →</a>
+    Nyt fersk kantinemat hver dag for kun <strong>1000 kr per måned</strong>.<br>
+    Ønsker du heller å spise av og til? Enkeltretter koster <strong>185 kr</strong>.<br><br>
 </p>
 
 {% endblock %}

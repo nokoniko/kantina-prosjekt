@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{% block title %}{% endblock %}</title>
+        <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo/logo.png') }}">
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     </head>
@@ -16,6 +17,7 @@
                     <li><a href="/meny">Meny</a></li>
                     <li><a href="/varer">Varer</a></li>
                     <li><a href="/kontakt">Kontakt</a></li>
+                    <li><a href="/dagmeny">test</a></li>
                 </ul>
             </nav>
         </div>
