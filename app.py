@@ -27,7 +27,8 @@ def varer() -> str:
 
 @app.route('/dagmeny')
 def dagens() -> str:
-    return render_template('kantine/dagens.html', dag=hjelp.dag)
+    return hjelp.dagmeny()
+
 
 @app.route('/rett/<slug>')
 def rett(slug: str) -> str:
