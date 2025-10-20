@@ -4,11 +4,11 @@ class Liste:
 
     # lagger 2 lister den enne til mat menyen og den adnre til de faste varerene
     menyen = [
-        {"navn": "Andeconfit", "kategori": "Varmrett", "allergener": ["gluten", "melk"], "bilde": "andeconfit.jpeg", "dag": "Mandag"},
-        {"navn": "Coq au vin", "kategori": "Varmrett", "allergener": [], "bilde": "coq_au_vin.jpg", "dag": "Tirsdag"},
-        {"navn": "Hokkaido-suppe", "kategori": "Suppe", "allergener": ["melk"], "bilde": "hokkaido_suppe.jpeg", "dag": "Onsdag"},
-        {"navn": "Bœuf bourguignon", "kategori": "Varmrett", "allergener": [], "bilde": "boeuf_bourguignon.jpg", "dag": "Torsdag"},
-        {"navn": "Ratatouille", "kategori": "Vegetarrett", "allergener": [], "bilde": "ratatouille.jpg", "dag": "Fredag"}
+        {"navn": "Andeconfit", "kategori": "Varmrett", "allergener": ["gluten", "melk"], "bilde": "andeconfit.jpeg", "dag": "Mandag", "slug": "andeconfit"},
+        {"navn": "Coq au vin", "kategori": "Varmrett", "allergener": [], "bilde": "coq_au_vin.jpg", "dag": "Tirsdag", "slug": "coq_au_vin"},
+        {"navn": "Hokkaido-suppe", "kategori": "Suppe", "allergener": ["melk"], "bilde": "hokkaido_suppe.jpeg", "dag": "Onsdag", "slug": "hokkaido-suppe"},
+        {"navn": "Bœuf bourguignon", "kategori": "Varmrett", "allergener": [], "bilde": "boeuf_bourguignon.jpg", "dag": "Torsdag", "slug": "boeuf-bourguignon"},
+        {"navn": "Ratatouille", "kategori": "Vegetarrett", "allergener": [], "bilde": "ratatouille.jpg", "dag": "Fredag", "slug": "ratatouille"}
     ]
 
     varere = [

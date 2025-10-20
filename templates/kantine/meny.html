@@ -5,15 +5,18 @@
 <h2 class="title-index">Kantineretter</h2>
 
 <div class="meny-konteiner">
+    <!---->
     {% for rett in menyen %}
     <div class="rett-boks">
-        <img src="{{ url_for('static', filename='img/meny/' ~ rett.bilde) }}" alt="{{ rett.navn }}" class="rett-bilde">
-        <strong>{{ rett.navn }}</strong>
-        <p>Dag: {{ rett.dag }}</p>
-        <p>Kategori: {{ rett.kategori }}</p>
-        {% if rett.allergener %}
-            <p><em>Allergener:</em> {{ rett.allergener | join(', ') }}</p>
-        {% endif %}
+        <a href="{{ url_for('rett', slug=rett.slug) }}" style="text-decoration: none; color: inherit;">
+            <img src="{{ url_for('static', filename='img/meny/' ~ rett.bilde) }}" alt="{{ rett.navn }}" class="rett-bilde">
+            <strong>{{ rett.navn }}</strong>
+            <p>Dag: {{ rett.dag }}</p>
+            <p>Kategori: {{ rett.kategori }}</p>
+            {% if rett.allergener %}
+                <p><em>Allergener:</em> {{ rett.allergener | join(', ') }}</p>
+            {% endif %}
+        </a>
     </div>
     {% endfor %}
 </div>
