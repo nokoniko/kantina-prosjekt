@@ -29,6 +29,11 @@ def varer() -> str:
 def dagens() -> str:
     return render_template('kantine/dagens.html', dag=hjelp.dag)
 
+@app.route('/rett/<slug>')
+def rett(slug: str) -> str:
+    # Viser enkel detaljside for rett basert på slug, koblet til templates/retter/<slug>.html
+    return render_template(f'retter/{slug}.html')
+
 # gjører
 if __name__ == "__main__":
     app.run(debug=True)
