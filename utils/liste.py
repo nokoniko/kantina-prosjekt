@@ -31,8 +31,11 @@ class Liste:
         {"navn": "Audun bao bum", "stilling": "Vaskehjelp", "bilde": "audun.jpeg", "epost": "audun.kantine@yessirski.com", "tlf": "401 23 456"},
         {"navn": "Ebbe Lebbe", "stilling": "Lokal narkoman", "bilde": "ebbe.jpg", "epost": "ebbe.kantine@yessirski.com", "tlf": "402 34 567"},
         {"navn": "Helene grene", "stilling": "Kasen", "bilde": "helene.jpeg", "epost": "helene.kantine@yessirski.com", "tlf": "403 45 678"},
-        {"navn": "Ludvig sudvig", "stilling": "Assistent", "bilde": "ludvig.jpeg", "epost": "ludvig.kantine@yessirski.com", "tlf": "404 56 789"},
-        {"navn": "Sebastian nastian", "stilling": "kokk", "bilde": "sebastian.jpeg", "epost": "sebastian.kantine@yessirski.com", "tlf": "405 67 890"}
+        {"navn": "Ludvig sudvig", "stilling": "kjøken vaper", "bilde": "ludvig.jpeg", "epost": "ludvig.kantine@yessirski.com", "tlf": "404 56 789"},
+        {"navn": "Sebastian nastian", "stilling": "kokk", "bilde": "sebastian.jpeg", "epost": "sebastian.kantine@yessirski.com", "tlf": "405 67 890"},
+        {"navn": "markus", "stilling": "alkaholiker", "bilde": "markus2.jpg", "epost": "markus.kantine@yessirski.com", "tlf": "406 41 911"},
+        {"navn": "thea", "stilling": "Die Fürer", "bilde": "thea.jpg", "epost": "thea.kantine@yessirski.com", "tlf": "407 44 671"}
+
     ]
     
     oversettelse = {
