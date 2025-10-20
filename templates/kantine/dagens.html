@@ -4,7 +4,7 @@
 {% block content %}
 {% if rett %}
 <div class="rett-boks" style="margin: 0 auto; max-width: 300px;">
-    <img src="{{ url_for('static', filename='images/' ~ rett.bilde) }}" alt="{{ rett.navn }}" class="rett-bilde">
+    <img src="{{ url_for('static', filename='img/meny/' ~ rett.bilde) }}" alt="{{ rett.navn }}" class="rett-bilde">
     <strong>{{ rett.navn }}</strong>
     <p>Dag: {{ rett.dag }}</p>
     <p>Kategori: {{ rett.kategori }}</p>

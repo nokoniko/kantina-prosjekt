@@ -2,30 +2,33 @@ from flask import Flask, render_template
 from utils.hjelp import Hjelp
 from utils.liste import *
 
+# ---- klasser ----
 app = Flask(__name__)
 hjelp = Hjelp(__name__)
 liste = Liste(__name__)
 
+# --- route til nettsider ---
 
 @app.route('/')
 def index() -> str:
-    return render_template('index.html')
+    return render_template('hjem/index.html')
 
 @app.route('/meny')
 def meny() -> str:
-    return render_template('meny.html', menyen=liste.menyen)
+    return render_template('kantine/meny.html', menyen=liste.menyen)
 
 @app.route('/kontakt')
 def kontakt() -> str:
-    return render_template('kontakt.html', kontakter=liste.kontanktpersoner)
+    return render_template('kantine/kontakt.html', kontakter=liste.kontanktpersoner)
 
 @app.route('/varer')
 def varer() -> str:
-    return render_template('varer.html', varere=liste.varere)
+    return render_template('kantine/varer.html', varere=liste.varere)
 
 @app.route('/dagmeny')
 def dagens() -> str:
-    return render_template('dagens.html')
+    return render_template('kantine/dagens.html', dag=hjelp.dag)
 
+# gjører
 if __name__ == "__main__":
     app.run(debug=True)
