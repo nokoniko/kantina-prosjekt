@@ -1,9 +1,9 @@
 {% extends "base.html" %}
-
 {% block title  %}Hjem{% endblock %}
-
 {% block content %}
-<h1 class="title-index">Vil du spise hos oss?</h1>
+<div class="banner" style="background-image: url({{ url_for('static', filename='img/bakgrund/bilde.jpg') }});">
+    <h1 class="title-index">Vil du spise hos oss?</h1>
+</div>
 <p class="brodtekst">
     Kantinen på Akademiet byr på <strong>ferske, smakfulle og varierte franske retter</strong> laget med omtanke.<br>
     Vi legger vekt på <strong>kvalitet, gode råvarer og personlig service</strong>, og ønsker at kantinen skal være et
