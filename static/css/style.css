@@ -4,12 +4,10 @@ html {
 
 body {
     margin: 0; 
-    padding-top: 30px; /* Legger til topp-padding for å beholde avstanden over topbaren */
-    padding-left: 60px;
-    padding-bottom: 51px; /* Legger til bunn-padding for å beholde avstanden under bunnteksten */
     font-family: 'Inter', sans-serif;
     background-color: #ffff;
     display: flex; /* Aktiverer Flexbox for body */
+    margin-left: 70px;
     flex-direction: column; /* Stabler elementene vertikalt (topbar, main, footer) */
     min-height: 100vh; /* Sørger for at body er minst like høy som skjermen */
 }
@@ -22,7 +20,6 @@ body {
 
 .title-index {
     font-size: 48px;
-    color: #000;
     padding-left: 60px;
 }
 
@@ -35,6 +32,7 @@ body {
     position: relative; /* Nødvendig for at 'position: absolute' på nav-elementet skal fungere i forhold til denne topbaren. */
     align-items: center; /* Sentrerer elementene vertikalt i topbaren. */
     padding-bottom: 60px; /* Legger til luft under topbaren. */
+    padding-top: 30px; /* Flytter padding hit fra body */
 }
 
 .logo img {
@@ -82,6 +80,8 @@ nav a:hover {
 /* Denne klassen er på <main>-elementet vi la til i base.html */
 .content-wrapper {
     flex-grow: 1; /* Forteller innholdet at det skal vokse og ta all ledig plass, og dermed dytte footeren ned */
+    padding-left: 51px;
+    padding-right: 51px;
 }
 
 .meny-konteiner {
@@ -105,7 +105,6 @@ nav a:hover {
 .rett-bilde {
     width: 100%;
     height: 140px;
-    object-fit: cover; /* Sørger for at bildet dekker hele rammen uten å strekkes. Det kan bli beskåret. */
     border-radius: 8px;
     margin-bottom: 10px;
 }
@@ -162,16 +161,72 @@ nav a:hover {
     padding-left: 0; /* Nullstiller padding for <p>-elementer inne i .rett-boks for å sikre sentrering. */
 }
 
-.kontakt-boks:hover {
-    transform: scale(1.05);
+.vare-konteiner {
+    display: flex;
+    flex-wrap: wrap; /* Sørger for at elementene "knekker" til neste linje hvis det ikke er plass. */
+    gap: 25px;
+    justify-content: flex-start; /* Starter elementene fra venstre. */
+    padding-bottom: 60px; /* for luft mot footer */
 }
 
-/* Legg til padding for hovedinnholdet og bunnteksten for å matche tidligere innrykk */
-/* Denne selektoren er litt avansert. Den gjør følgende: */
-/* 'body > *' velger alle elementer som er direkte barn av <body>. */
-/* ':not(.topbar)' ekskluderer elementet med klassen 'topbar' fra utvalget. */
-/* Resultatet er at alle direkte barn av body, unntatt topbaren, får denne stylingen. */
-body > *:not(.topbar) {
-    padding-left: 51px;
-    padding-right: 51px;
+.vare-boks {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    width: 350px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+}
+
+.vare-bilde {
+    width: 100%;
+    height: 140px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.vare-boks strong {
+    font-size: 18px;
+    color: #000;
+}
+
+.vare-boks p {
+    margin: 5px 0;
+    font-size: 14px;
+    padding-left: 0; /* Nullstiller padding for <p>-elementer inne i .rett-boks for å sikre sentrering. */
+}
+
+/* Stiler for banner på enkeltsider for retter */
+.banner {
+    width: 100%;
+    height: 300px; /* Økt høyde for mer visuell effekt */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px; /* Økt avstand til teksten under */
+    position: relative; /* Nødvendig for overlay */
+    color: white; /* Setter tekstfarge for alt inni */
+    /* Negativ margin for å trekke banneret utenfor paddingen til content-wrapper */
+}
+
+/* Legger til et mørkt, gjennomsiktig lag over banneret for bedre tekstlesbarhet */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Mørkere for bedre kontrast */
+}
+
+.banner-tittel {
+    font-size: 48px; /* Større tittel */
+    font-family: 'Inter', sans-serif;
+    position: relative; /* Sørger for at tittelen ligger over overlayet */
+    z-index: 1;
+    /* Fjerner behovet for egen bakgrunn på tittelen, da banneret nå har et overlay */
 }
