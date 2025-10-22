@@ -26,7 +26,7 @@ Følg disse trinnene for å få prosjektet til å kjøre lokalt:
 
 1.  **Klon repositoryet**:
     ```bash
-    git clone <repository_url> # Erstatt med den faktiske URL-en til ditt repository
+    git clone https://github.com/nokoniko/kantina-prosjekt.git # Erstatt med den faktiske URL-en til ditt repository
     cd kantina-prosjekt
     ```
 
@@ -44,7 +44,8 @@ Følg disse trinnene for å få prosjektet til å kjøre lokalt:
 
 4.  **Kjør applikasjonen**:
     ```bash
-    python app.py
+    python app.py # windowa
+    python3 app.py # macOS/linux
     ```
     Applikasjonen vil vanligvis kjøre på `http://127.0.0.1:5000/`.
 
