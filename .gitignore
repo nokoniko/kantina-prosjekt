@@ -40,3 +40,7 @@ htmlcov/
 # Environments
 .env
 .env.*
+
+messages/messages.json
+
+.gitignore
