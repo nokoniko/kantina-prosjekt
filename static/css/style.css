@@ -85,13 +85,12 @@ nav a:hover {
 }
 
 .boks-konteiner {
-    display: flex;
-    flex-wrap: wrap; /* Sørger for at elementene "knekker" til neste linje hvis det ikke er plass. */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Automatisk antall kolonner */
     gap: 25px;
-    justify-content: flex-start; /* Starter elementene fra venstre. */
-    padding-bottom: 60px; /* for luft mot footer */
-    padding-left: 30px;
-}
+    padding: 30px;
+    }
+
 
 .boks {
     background-color: #fff;
@@ -116,6 +115,7 @@ nav a:hover {
 .boks-bilde {
     width: 100%;
     height: 180px;
+    border-radius: 10px;
     object-fit: contain; /* bildet passer inn i boksen uten å beskjæres, men kan få hvite kanter */
     background-color: #fff; /* kan fylle tomrommet med hvit bakgrunn */
 }
@@ -146,17 +146,20 @@ nav a:hover {
 
 /* Stiler for banner på enkeltsider for retter */
 .banner {
-    width: 100%;
+    /* Bruker viewport width for å strekke banneret over hele skjermbredden, 
+       og calc() for å trekke fra paddingen i .content-wrapper og marginen i body. */
+    width: 100vw; /* Setter bredden til 100% av nettleservinduet */
+    margin-left: -121px; /* Kompenserer for body-margin (70px) + content-padding (51px) */
+    
     height: 300px; /* Økt høyde for mer visuell effekt */
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 30px; /* Økt avstand til teksten under */
+    margin-bottom: 30px; /* Økt avstand til teksten under. margin-top/right/bottom fungerer som før. */
     position: relative; /* Nødvendig for overlay */
     color: white; /* Setter tekstfarge for alt inni */
-    /* Negativ margin for å trekke banneret utenfor paddingen til content-wrapper */
 }
 
 /* Legger til et mørkt, gjennomsiktig lag over banneret for bedre tekstlesbarhet */
