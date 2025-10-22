@@ -1,11 +1,13 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for, flash
 from utils.hjelp import Hjelp
 from utils.liste import *
-
+from utils.forms import *
 # ---- klasser ----
 app = Flask(__name__)
+app.secret_key = 'supersecretkey'
 hjelp = Hjelp(__name__)
 liste = Liste(__name__)
+forms = Forms(__name__)
 
 # --- route til nettsider ---
 
@@ -34,6 +36,16 @@ def dagens() -> str:
 def rett(slug: str) -> str:
     # Viser enkel detaljside for rett basert på slug, koblet til templates/retter/<slug>.html
     return render_template(f'retter/{slug}.html')
+
+@app.route('/tilbakemelding', methods=['GET', 'POST'])
+def tilbakemelding():
+    if request.method == 'POST':
+        navn = request.form['name']
+        melding = request.form['message']
+        forms.save_message(navn, melding)
+        flash("Takk for tilbakemeldingen! 😊")
+        return redirect(url_for('tilbakemelding'))
+    return forms.vis_tilbakemeldinger()
 
 # gjører
 if __name__ == "__main__":

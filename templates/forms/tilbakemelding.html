@@ -8,7 +8,7 @@
 
 <h2 class="title-index">Legg igjen en tilbakemelding</h2>
 
-<div class="kontakt-boks" style="margin-left:60px;">
+<div class="boks">
   <form method="POST">
     <p><label>Navn:</label><br>
     <input type="text" name="name" required></p>
@@ -21,7 +21,7 @@
 </div>
 
 <h2 class="title-index">Tidligere tilbakemeldinger</h2>
-<div class="boks-konteiner" style="margin-left:60px;">
+<div class="boks-konteiner">
   {% for msg in messages %}
   <div class="boks">
     <strong>{{ msg.name }}</strong><br>
