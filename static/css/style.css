@@ -150,7 +150,6 @@ nav a:hover {
        og calc() for å trekke fra paddingen i .content-wrapper og marginen i body. */
     width: 100vw; /* Setter bredden til 100% av nettleservinduet */
     margin-left: -121px; /* Kompenserer for body-margin (70px) + content-padding (51px) */
-    
     height: 300px; /* Økt høyde for mer visuell effekt */
     background-size: cover;
     background-position: center;

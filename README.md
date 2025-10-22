@@ -1,6 +1,6 @@
 # Kantina-prosjekt
 
-Dette er en Flask-basert webapplikasjon for en kantine, designet for å presentere dagens meny, et fullstendig utvalg av varer, kontaktinformasjon for ansatte, og detaljerte beskrivelser av individuelle retter. Prosjektet legger vekt på bærekraft og kvalitet.
+Dette er en <span style="color: #007bff;">Flask-basert</span> webapplikasjon for en kantine, designet for å presentere dagens meny, et fullstendig utvalg av varer, kontaktinformasjon for ansatte, og detaljerte beskrivelser av individuelle retter. Prosjektet legger vekt på <span style="color: #28a745;">bærekraft og kvalitet</span>.
 
 ## Funksjoner
 
@@ -9,16 +9,16 @@ Dette er en Flask-basert webapplikasjon for en kantine, designet for å presente
 -   **Vareoversikt**: En side som lister opp ulike varer som drikke, snacks og andre matprodukter.
 -   **Detaljerte Rettsider**: Hver hovedrett har sin egen side med beskrivelse og bilde.
 -   **Kontaktinformasjon for Ansatte**: En kontaktside med detaljer (navn, stilling, e-post, telefon, bilde) for kantinepersonalet.
--   **Bærekraftsfokus**: Fremhever kantinens forpliktelse til bærekraftige praksiser, som bruk av kortreiste råvarer og reduksjon av matsvinn.
+-   <span style="color: #28a745;">**Bærekraftsfokus**</span>: Fremhever kantinens forpliktelse til bærekraftige praksiser, som bruk av <span style="color: #28a745;">kortreiste råvarer</span> og reduksjon av matsvinn.
 -   **Responsivt Design**: Tilpasser seg ulike skjermstørrelser for en god brukeropplevelse.
 
 ## Teknologier Brukt
 
 -   **Python 3.x**
--   **Flask**: Et lettvekts webrammeverk for Python.
--   **Jinja2**: Templating-motor brukt av Flask for å generere HTML.
--   **HTML5**
--   **CSS3**
+-   <span style="color: #007bff;">**Flask**</span>: Et lettvekts webrammeverk for Python.
+-   <span style="color: #007bff;">**Jinja2**</span>: Templating-motor brukt av Flask for å generere HTML.
+-   <span style="color: #007bff;">**HTML5**</span>
+-   <span style="color: #007bff;">**CSS3**</span>
 
 ## Oppsett og Installasjon
 
