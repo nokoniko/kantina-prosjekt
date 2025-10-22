@@ -9,7 +9,7 @@
     <p>Dag: {{ rett.dag }}</p>
     <p>Kategori: {{ rett.kategori }}</p>
     {% if rett.allergener %}
-        <p><em>Allergener:</em> {{ rett.allergener | join(', ') }}</p>
+        <p><em>Allergier:</em> {{ rett.allergier | join(', ') }}</p>
     {% endif %}
 </div>
 {% else %}

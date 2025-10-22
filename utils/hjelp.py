@@ -5,25 +5,21 @@ class Hjelp:
     def __init__(self, name) -> None:
         self.name = name
 
-    # lager en variablen som hetter dag. den får hvulken dag det er med å bruke datetime.
-    dag = datetime.datetime.now().strftime("%A")
     def dagmeny(self) -> str:
         """
-        lager en funskjon som bruker den lokale variablen dag den matcher hvilken dag det er og retunerer den rikitge nettsiden får den dagen
+        Finner dagens rett basert på ukedagen og returnerer den tilhørende templaten.
+        Datoen hentes hver gang funksjonen kalles for å sikre at den alltid er korrekt.
         """
-        match self.dag:
+        # Henter navnet på gjeldende dag (f.eks. "Monday") hver gang funksjonen kjøres.
+        dag = datetime.datetime.now().strftime("%A")
+        match dag:
             case "Monday":
                 return render_template('retter/andeconfit.html')
-            case "Tusday":
+            case "Tuesday":
                 return render_template('retter/coq_au_vin.html')
             case "Wednesday":
-                return render_template('retter/hokkaido_suppe.html')
+                return render_template('retter/hokkaido-suppe.html')
             case "Thursday":
                 return render_template('retter/boeuf_bourguignon.html')
             case "Friday":
                 return render_template('retter/ratatouille.html')
-
-
-if __name__ == "__main__":
-    h = Hjelp(__name__)
-    print(h.dag)
