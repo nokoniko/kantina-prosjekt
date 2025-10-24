@@ -31,9 +31,9 @@ class Forms:
         """
         # Oppretter et data-objekt med meldingsinformasjon
         data = {
-            "name": name,  # Navnet på avsenderen
-            "message": message,  # Meldingsteksten
-            "timestamp": datetime.now().strftime("%d.%m.%Y kl. %H:%M")  # Nåværende tidspunkt formatert som "dd.mm.yyyy kl. hh:mm"
+            "navn": name,  # Navnet på avsenderen
+            "melding": message,  # Meldingsteksten
+            "tidspunkt": datetime.now().strftime("%d.%m.%Y kl. %H:%M")  # Nåværende tidspunkt formatert som "dd.mm.yyyy kl. hh:mm"
         }
 
         # Starter med en tom liste for eksisterende meldinger

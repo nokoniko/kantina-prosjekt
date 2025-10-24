@@ -11,10 +11,10 @@
 <div class="boks">
   <form method="POST">
     <p><label>Navn:</label><br>
-    <input type="text" name="name" required></p>
+    <input type="text" name="navn" required></p>
 
     <p><label>Melding:</label><br>
-    <textarea name="message" required></textarea></p>
+    <textarea name="melding" required></textarea></p>
 
     <button type="submit">Send</button>
   </form>
@@ -24,9 +24,9 @@
 <div class="boks-konteiner">
   {% for msg in messages %}
   <div class="boks">
-    <strong>{{ msg.name }}</strong><br>
-    <small style="color:gray;">{{ msg.timestamp }}</small>
-    <p>{{ msg.message }}</p>
+    <strong>{{ msg.navn }}</strong><br>
+    <small style="color:gray;">{{ msg.tidspunkt }}</small>
+    <p>{{ msg.melding }}</p>
   </div>
   {% else %}
   <p>Ingen tilbakemeldinger enda – bli den første!</p>

@@ -20,6 +20,6 @@ class Hjelp:
             case "Wednesday":
                 return render_template('retter/hokkaido-suppe.html')
             case "Thursday":
-                return render_template('retter/boeuf_bourguignon.html')
+                return render_template('retter/boeuf-bourguignon.html')
             case "Friday":
                 return render_template('retter/ratatouille.html')

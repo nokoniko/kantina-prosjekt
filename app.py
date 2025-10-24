@@ -40,8 +40,8 @@ def rett(slug: str) -> str:
 @app.route('/tilbakemelding', methods=['GET', 'POST'])
 def tilbakemelding():
     if request.method == 'POST':
-        navn = request.form['name']
-        melding = request.form['message']
+        navn = request.form['navn']
+        melding = request.form['melding']
         forms.save_message(navn, melding)
         flash("Takk for tilbakemeldingen! 😊")
         return redirect(url_for('tilbakemelding'))

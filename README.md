@@ -88,4 +88,4 @@ Dette prosjektet er åpent kildekode og tilgjengelig under MIT-lisensen.
 
 ## Kilder
 
-Chatgpt til å generere tekst til hjemmesiden og beskrivelsen til de forskjellige rettene.
+Chatgpt til å generere tekst til hjemmesiden og beskrivelsen til de forskjellige rettene, lage json logiken, gemini til å lage README.md fil og fikse noen css problemer.

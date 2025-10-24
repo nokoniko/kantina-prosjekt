@@ -35,5 +35,8 @@ class Liste:
         {"navn": "Sebastian nastian", "stilling": "Vaffel-ingeniør", "bilde": "sebastian.jpeg", "epost": "sebastian.kantine@yessirski.com", "tlf": "405 67 890"},
         {"navn": "markus", "stilling": "Fruktkurator", "bilde": "markus2.jpg", "epost": "markus.kantine@yessirski.com", "tlf": "406 41 911"},
         {"navn": "thea", "stilling": "Kryddermester", "bilde": "thea.jpg", "epost": "thea.kantine@yessirski.com", "tlf": "407 44 671"},
-        {"navn": "Mio", "stilling": "Kantine katt", "bilde": "mio.jpeg", "epost": "mio.kantine@yessirski.com", "tlf": "407 67 271"}
+        {"navn": "Mio", "stilling": "Kantine katt", "bilde": "mio.jpeg", "epost": "mio.kantine@yessirski.com", "tlf": "407 67 271"},
+        {"navn": "Jabok", "stilling": "Lokal narkoman", "bilde": "jabok.jpeg", "epost": "jabok.kantine@yessirski.com", "tlf": "67676767"},
+        {"navn": "Marcus", "stilling": "vakt", "bilde": "marcus.jpeg", "epost": "marcus.kantine@yessirski.com", "tlf": "413 56 789"},
+        {"navn": "Simen", "stilling": "Vaskehjelp vikar", "bilde": "simen.jpeg", "epost": "simen.kantine@yessirski.com", "tlf": "414 67 890"}
     ]
