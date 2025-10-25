@@ -27,7 +27,7 @@ class Liste:
     ]
 
     kontanktpersoner = [
-        {"navn": "Nikolai pai", "stilling": "Kaffesjef", "bilde": "nikolai.jpeg", "epost": "nikolai.kantine@yessirski.com", "tlf": "400 12 345"},
+        {"navn": "Nikolai pai", "stilling": "Kaffesjef", "bilde": "nikolai.jpeg", "epost": "nikolai.kantine@yessirski.li", "tlf": "400 12 345"},
         {"navn": "Audun bao bum", "stilling": "Assisterene Vaske hjelp", "bilde": "audun.jpeg", "epost": "audun.kantine@yessirski.com", "tlf": "401 23 456"},
         {"navn": "Ebbe Lebbe", "stilling": "Brownie-ansvarlig", "bilde": "ebbe.jpg", "epost": "ebbe.kantine@yessirski.com", "tlf": "402 34 567"},
         {"navn": "Helene grene", "stilling": "Logistikk-magiker", "bilde": "helene.jpeg", "epost": "helene.kantine@yessirski.com", "tlf": "403 45 678"},
